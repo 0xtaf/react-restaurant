@@ -71,11 +71,21 @@ class App extends React.Component {
         
         <Header>
           <h1 className="header">0xtaf's Restaurant</h1>
-          <p className={isMenuClicked ? 'clearIntro' : 'intro'}>Inspired React Cuisine</p>
+          <p className={(isMenuClicked || isContactClicked) ? 'clearIntro' : 'intro'}>Inspired React Cuisine</p>
         </Header>  
 
         <div className={(isMenuClicked || isContactClicked) ? 'colorless' : 'color'}></div> 
         {console.log(Buttons.state)};
+        <div className="contact" style={isContactClicked ? menuStyleActive : menuStyle}>
+          <h1 className="contact1">DROP ME A MESSAGE</h1>
+          <p className="contact2">Let me know if you'd like to share any opinions or suggestions.</p>
+          <h1 className="contact3">EMAIL</h1>
+          <p className="contact4">tayfunsur@gmail.com</p>
+          <h1 className="contact5">GITHUB</h1>
+          <a href="http://github.com/0xtaf" className="contact6">http://github.com/0xtaf</a>
+          <h1 className="contact7">TWITTER</h1>
+          <a href="https://twitter.com/OdbTayfun" className="contact8">https://twitter.com/OdbTayfun</a>
+        </div>
       </div>
     );
   }
