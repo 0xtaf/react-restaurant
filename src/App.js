@@ -46,7 +46,6 @@ class App extends React.Component {
   render() {
     const isMenuClicked = this.state.isMenuClicked;
     const isContactClicked = this.state.isContactClicked;
-    const isHomeClicked = this.state.isHomeClicked;
     const menuStyle = {
       display: 'none',
     }
@@ -57,7 +56,6 @@ class App extends React.Component {
     return (
       
       <div className='App'>      
-      {console.log('rendered app again')}
         <div className="tab-color"></div>
         <Buttons 
           onIsMenuClickedChange={this.handleIsMenuClickedChange}
@@ -75,7 +73,6 @@ class App extends React.Component {
         </Header>  
 
         <div className={(isMenuClicked || isContactClicked) ? 'colorless' : 'color'}></div> 
-        {console.log(Buttons.state)};
         <div className="contact" style={isContactClicked ? menuStyleActive : menuStyle}>
           <h1 className="contact1">DROP ME A MESSAGE</h1>
           <p className="contact2">Let me know if you'd like to share any opinions or suggestions.</p>

@@ -7,27 +7,16 @@ class Button extends React.Component {
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.handleContactClick = this.handleContactClick.bind(this);
     this.handleHomeClick = this.handleHomeClick.bind(this);
-    // this.state = {
-    //   isMenuClicked: false,
-    //   isHomeClicked: false,
-    //   isContactClicked: false,
-    // }
   }
 
 
   handleMenuClick() {
-    //const currentState = this.props.isMenuClicked;
-    //this.setState({isMenuClicked: !currentState});
     this.props.onIsMenuClickedChange();
   }
   handleContactClick() {
-    //const currentState = this.props.isContactClicked;
-    //this.setState({isContactClicked: !currentState});
     this.props.onIsContactClickedChange();
   }
   handleHomeClick() {
-    //const currentState = this.props.isHomeClicked;
-    //this.setState({isHomeClicked: !currentState});
     this.props.onIsHomeClickedChange();
   }
 
