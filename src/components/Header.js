@@ -1,12 +1,11 @@
 import React from 'react';
 
 function Header() {
-  return (
-    <div>
-      <header>
-        <h1  className="header">0xtaf's Restaurant</h1>
-      </header>
-    </div>
+  return (   
+    <div className="content">
+        <h1 className="header">0xtaf's Restaurant</h1>
+        <p className="intro">Inspired React Cuisine</p>
+    </div>   
   )
 }
 
