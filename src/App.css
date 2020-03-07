@@ -1,3 +1,13 @@
+html, body {
+  height: 95%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
 .App {
   background-image: url('./images/background.jpg') ; 
   background-position: center;
@@ -21,4 +31,34 @@ h1.header{
   color: rgb(255, 255, 255);
   font-size: 300%;
   z-index: 2;
+}
+
+.btnNav{
+  float: right;
+  font-family: 'Birdseye', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
+  display: block;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  margin-left: 6px;
+  /* -webkit-transition: opacity 300ms ease;
+  -moz-transition: opacity 300ms ease;
+  -ms-transition: opacity 300ms ease;
+  transition: opacity 300ms ease; */
 }
