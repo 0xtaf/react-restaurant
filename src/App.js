@@ -47,12 +47,16 @@ class App extends React.Component {
     const isMenuClicked = this.state.isMenuClicked;
     const isContactClicked = this.state.isContactClicked;
     const isHomeClicked = this.state.isHomeClicked;
-    {console.log("home click: "+this.state.isHomeClicked)}
-    {console.log("contact click: "+this.state.isContactClicked)}
-    {console.log("menu click: "+this.state.isMenuClicked)}
+    const menuStyle = {
+      display: 'none',
+    }
+    const menuStyleActive = {
+      display: 'block',
+      
+    }
     return (
       
-      <div className="App">      
+      <div className='App'>      
       {console.log('rendered app again')}
         <div className="tab-color"></div>
         <Buttons 
@@ -60,9 +64,17 @@ class App extends React.Component {
           onIsContactClickedChange={this.handleIsContactClickedChange}
           onIsHomeClickedChange={this.handleIsHomeClickedChange}
         />
-        <div className={isMenuClicked ? 'blurred' : 'bgg'}></div> 
-        <Header />  
-        <div className='color'></div> 
+        
+        <div className='menu' style={isMenuClicked ? menuStyleActive : menuStyle}></div>
+        
+        <div className={(isMenuClicked || isContactClicked) ? 'blurred' : 'bgg'}></div> 
+        
+        <Header>
+          <h1 className="header">0xtaf's Restaurant</h1>
+          <p className={isMenuClicked ? 'clearIntro' : 'intro'}>Inspired React Cuisine</p>
+        </Header>  
+
+        <div className={(isMenuClicked || isContactClicked) ? 'colorless' : 'color'}></div> 
         {console.log(Buttons.state)};
       </div>
     );

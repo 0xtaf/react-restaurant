@@ -1,10 +1,9 @@
 import React from 'react';
 
-function Header() {
+function Header(props) {
   return (   
     <div className="content">
-        <h1 className="header">0xtaf's Restaurant</h1>
-        <p className="intro">Inspired React Cuisine</p>
+        {props.children}
     </div>   
   )
 }
